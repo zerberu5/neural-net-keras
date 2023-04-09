@@ -49,3 +49,7 @@ def build_model():
     model.add(Dense(1, activation='tanh'))
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
     return model
+
+
+if __name__ == "__main__":
+    print(run_net('data/training.txt', 'data/test.txt'))
